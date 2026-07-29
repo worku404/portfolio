@@ -335,7 +335,14 @@
 }
 
 .about-title span {
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+}
+
+@media (min-width: 640px) {
+  .about-title span {
+    white-space: nowrap;
+  }
 }
 
 .profile-card {
@@ -364,8 +371,14 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* grid-cols-2 */
+  grid-template-columns: 1fr; /* Single column on narrow mobile */
   gap: 1rem; /* gap-4 */
+}
+
+@media (min-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablet and up */
+  }
 }
 
 .stat-card {
@@ -374,6 +387,7 @@
   background: rgba(0, 0, 0, 0.6); /* bg-background/60 */
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px); /* backdrop-blur-sm */
+  word-break: break-word;
 }
 
 .stat-label {
@@ -390,6 +404,7 @@
   font-size: 1.125rem; /* text-lg */
   font-family: var(--font-sans);
   color: #ffffff;
+  word-break: break-word;
 }
 
 .about-right {
