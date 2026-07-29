@@ -15,6 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
   initRunnerGame();
   initContactMe();
 
+  const aboutDetails = document.querySelector('.about-details');
+  if (aboutDetails) {
+    const syncBioDetails = () => {
+      if (window.innerWidth >= 768) {
+        aboutDetails.setAttribute('open', '');
+      } else {
+        aboutDetails.removeAttribute('open');
+      }
+    };
+    syncBioDetails();
+    window.addEventListener('resize', syncBioDetails);
+  }
+
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
