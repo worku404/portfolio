@@ -3,7 +3,7 @@ export function initCursor() {
   const cursor = document.getElementById('custom-cursor');
   const dot = document.getElementById('custom-cursor-dot');
   const iconGroup = document.getElementById('floating-icons');
-  const cssCube = document.getElementById('css-cube');
+  const cubeWrapper = document.querySelector('.css-cube-wrapper');
   const glowAura = document.getElementById('cube-glow-aura');
 
   if (!cursor || !dot) return;
@@ -39,9 +39,9 @@ export function initCursor() {
     cursor.style.left = `${cursorX}px`;
     cursor.style.top = `${cursorY}px`;
 
-    // Move CSS 3D Cube and background glow aura dynamically with cursor
-    if (cssCube && glowAura) {
-      cssCube.style.transform = `translate3d(${targetX * 0.8}px, ${targetY * 0.8}px, 0) rotateX(${25 - targetY * 0.5}deg) rotateY(${targetX * 0.7}deg)`;
+    // Move CSS 3D Cube wrapper & background glow aura with mouse parallax without interfering with @keyframes rotateCube
+    if (cubeWrapper && glowAura) {
+      cubeWrapper.style.transform = `translate3d(${targetX * 0.8}px, ${targetY * 0.8}px, 0)`;
       glowAura.style.transform = `translate3d(${targetX * 1.4}px, ${targetY * 1.4}px, 0)`;
     }
 
