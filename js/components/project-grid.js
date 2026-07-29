@@ -1,5 +1,5 @@
-/* Projects Grid Renderer with Embedded Fallback & GSAP 3D Tilt */
-const DEFAULT_PROJECTS = [
+/* Projects Grid Renderer with Direct Inline Data & GSAP 3D Tilt */
+const PROJECTS = [
   {
     "id": "1",
     "title": "NextGen Academy — E-Learning Platform",
@@ -35,25 +35,11 @@ const DEFAULT_PROJECTS = [
   }
 ];
 
-export async function initProjectsGrid() {
+export function initProjectsGrid() {
   const container = document.getElementById('projects-grid');
   if (!container) return;
 
-  let projects = DEFAULT_PROJECTS;
-
-  try {
-    const response = await fetch('data/projects.json');
-    if (response.ok) {
-      const data = await response.json();
-      if (Array.isArray(data) && data.length > 0) {
-        projects = data;
-      }
-    }
-  } catch (err) {
-    console.warn('Using embedded fallback projects dataset:', err);
-  }
-
-  container.innerHTML = projects
+  container.innerHTML = PROJECTS
     .map(
       (p) => `
       <div class="project-item">
