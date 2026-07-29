@@ -12,7 +12,7 @@ const PROJECTS = [
   {
     "id": "2",
     "title": "My Shop — Django E-Commerce Platform",
-    "description": "Production-ready e-commerce platform featuring product catalog, cart, coupon logic, weighted shipping calculation, and Stripe checkout integration.",
+    "description": "Production-ready e-commerce platform featuring  localized storefronts, cart and coupon logic, weighted shipping, Stripe checkout, webhook-based payment verification, invoice generation, and asynchronous processing with Celery",
     "imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1200&q=80",
     "color": "#22d3ee",
     "githubUrl": "https://github.com/worku404/Online-Shop"
@@ -31,7 +31,7 @@ const PROJECTS = [
     "description": "Web bookmarking tool with email authentication, Google OAuth2, automatic image thumbnail generation, and user activity tracking.",
     "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1200&q=80",
     "color": "#3b82f6",
-    "githubUrl": "https://github.com/worku404"
+    "githubUrl": "https://github.com/worku404/W-Mark"
   }
 ];
 
