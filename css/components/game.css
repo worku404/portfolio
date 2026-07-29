@@ -1,7 +1,7 @@
 /* 2D Arcade Runner Game Section (Exact Match to RunnerGame.tsx with Mobile Responsiveness) */
 .game-section {
   padding: 6rem 0; /* py-24 */
-  background-color: #000000; /* bg-background */
+  background-color: var(--bg-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem; /* gap-4 */
+  color: var(--text-primary);
 }
 
 @media (min-width: 768px) {
@@ -32,7 +33,7 @@
 }
 
 .game-subtitle {
-  color: rgba(255, 255, 255, 0.5); /* text-foreground/50 */
+  color: var(--text-secondary);
   max-width: 36rem; /* max-w-xl (576px) */
   margin: 0 auto;
   line-height: 1.625; /* leading-relaxed */
@@ -46,11 +47,11 @@
   max-width: 1040px; /* max-w-[1040px] */
   aspect-ratio: 16 / 9; /* aspect-[16/9] mobile */
   min-height: 220px;
-  background-color: rgba(255, 255, 255, 0.02); /* bg-muted/20 */
+  background-color: var(--bg-secondary);
   border-radius: 16px; /* rounded-2xl */
-  border: 2px solid rgba(255, 255, 255, 0.05); /* border-2 border-foreground/5 */
+  border: 2px solid var(--border-color);
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* shadow-2xl */
+  box-shadow: 0 25px 50px -12px var(--shadow-color);
   outline: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
@@ -96,14 +97,14 @@
   font-size: 0.625rem; /* text-[10px] */
   text-transform: uppercase;
   letter-spacing: 0.1em; /* tracking-widest */
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-muted);
   display: block;
 }
 
 .score-value {
   font-size: 1.25rem; /* text-xl on mobile */
   font-weight: 900;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 @media (min-width: 768px) {

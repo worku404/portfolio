@@ -1,21 +1,24 @@
-/* CSS Design Tokens & Color Palette (Exact Match to Original React App) */
+/* CSS Design Tokens & Color Palette */
 :root {
   /* Fonts */
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-  /* Light Theme Colors */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-card: rgba(255, 255, 255, 0.85);
+  /* Light Theme Colors (Clean Slate & Mint Glass) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.9);
   --text-primary: #0f172a;
   --text-secondary: #334155;
   --text-muted: #64748b;
-  --border-color: rgba(15, 23, 42, 0.1);
+  --border-color: rgba(15, 23, 42, 0.12);
+  --cube-bg: rgba(236, 253, 245, 0.9);
+  --cube-border: rgba(16, 185, 129, 0.4);
+  --shadow-color: rgba(15, 23, 42, 0.08);
 
   /* Accent Colors */
-  --accent-cyan: #22d3ee;
+  --accent-cyan: #06b6d4;
   --accent-blue: #2563eb;
   --accent-emerald: #10b981;
   --accent-purple: #a855f7;
@@ -30,7 +33,7 @@
   --z-cursor: 9999;
 }
 
-/* Dark Theme Colors (Exact Match: #000000 Primary, #121212 Muted Sections) */
+/* Dark Theme Colors (UNTOUCHED ORIGINAL MATCH) */
 html.dark {
   --bg-primary: #000000;
   --bg-secondary: #121212;
@@ -39,4 +42,8 @@ html.dark {
   --text-secondary: rgba(255, 255, 255, 0.8);
   --text-muted: rgba(255, 255, 255, 0.4);
   --border-color: rgba(255, 255, 255, 0.1);
+  --cube-bg: rgba(2, 44, 34, 0.85);
+  --cube-border: rgba(16, 185, 129, 0.35);
+  --shadow-color: rgba(0, 0, 0, 0.8);
+  --accent-cyan: #22d3ee;
 }

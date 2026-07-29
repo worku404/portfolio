@@ -1,4 +1,4 @@
-/* Navbar & Navigation Drawer Styles (Exact Match to App.tsx) */
+/* Navbar & Navigation Drawer Styles */
 .scroll-progress-bar {
   position: fixed;
   top: 0;
@@ -70,7 +70,7 @@
   font-weight: 900;
   font-size: 1.125rem;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .brand-role {
@@ -78,7 +78,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-muted);
 }
 
 .navbar-controls {
@@ -91,17 +91,18 @@
 .icon-btn {
   padding: 1rem;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-primary);
   transition: background-color 0.2s ease;
 }
 
 .icon-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-secondary);
 }
 
 .icon-btn .icon {
@@ -114,11 +115,16 @@
   color: #facc15;
 }
 
-/* Drawer Menu (Exact z-index fix: z-index 40 when open so it sits above main content but below navbar header controls) */
+/* Moon icon color text-indigo-400 */
+#moon-icon {
+  color: #818cf8;
+}
+
+/* Drawer Menu */
 .menu-drawer {
   position: fixed;
   inset: 0;
-  background-color: #000000;
+  background-color: var(--bg-primary);
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -132,7 +138,7 @@
 }
 
 .menu-drawer.open {
-  z-index: 40; /* Fixes stacking context so drawer links are interactive */
+  z-index: 40; /* Stacking context above main content but below navbar header */
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -149,12 +155,12 @@
   font-size: 3.5rem;
   font-weight: 900;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.1);
-  transition: color 0.5s ease, transform 0.3s ease;
+  color: var(--text-muted);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .drawer-link:hover {
-  color: #ffffff;
+  color: var(--text-primary);
   font-style: italic;
 }
 

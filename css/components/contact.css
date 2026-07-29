@@ -1,9 +1,10 @@
-/* Contact Section & Footer Layout Styles (Exact Match to ContactMe.tsx & App.tsx Footer) */
+/* Contact Section & Footer Layout Styles */
 .contact-section {
   padding: 6rem 1.5rem; /* py-24 px-6 */
-  background-color: #121212; /* bg-muted/20 */
+  background-color: var(--bg-secondary);
   position: relative;
   overflow: hidden;
+  border-top: 1px solid var(--border-color);
 }
 
 @media (min-width: 768px) {
@@ -44,6 +45,7 @@
   line-height: 1; /* leading-none */
   margin-bottom: 2rem; /* mb-8 (32px) */
   font-family: var(--font-sans);
+  color: var(--text-primary);
 }
 
 @media (min-width: 768px) {
@@ -53,7 +55,7 @@
 }
 
 .contact-sub {
-  color: rgba(255, 255, 255, 0.6); /* text-foreground/60 */
+  color: var(--text-secondary);
   font-size: 1.125rem; /* text-lg (18px) */
   margin-bottom: 3rem; /* mb-12 (48px) */
   max-width: 28rem; /* max-w-md (448px) */
@@ -78,13 +80,13 @@
   width: 56px; /* w-14 (56px) */
   height: 56px; /* h-14 (56px) */
   border-radius: 16px; /* rounded-2xl */
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .info-icon-box.icon-mail:hover {
@@ -115,7 +117,7 @@
   font-size: 0.75rem; /* text-xs */
   text-transform: uppercase;
   letter-spacing: 0.1em; /* tracking-widest */
-  color: rgba(255, 255, 255, 0.3); /* text-foreground/30 */
+  color: var(--text-muted);
   display: block;
   margin-bottom: 0.25rem;
 }
@@ -123,7 +125,7 @@
 .info-val {
   font-size: 1.25rem; /* text-xl (20px) */
   font-weight: 700; /* font-bold */
-  color: #ffffff;
+  color: var(--text-primary);
   transition: color 0.2s ease;
 }
 
@@ -133,12 +135,12 @@
 
 /* Contact Form Card: bg-card/50 backdrop-blur-xl border border-foreground/10 p-8 md:p-12 rounded-3xl shadow-2xl */
 .contact-form-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   backdrop-filter: blur(24px); /* backdrop-blur-xl */
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
   padding: 2rem; /* p-8 (32px) */
   border-radius: 24px; /* rounded-3xl */
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 50px -12px var(--shadow-color);
 }
 
 @media (min-width: 768px) {
@@ -176,7 +178,7 @@
   font-size: 0.75rem; /* text-xs */
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-muted);
   margin-left: 0.25rem;
 }
 
@@ -192,16 +194,16 @@
   transform: translateY(-50%);
   width: 16px; /* w-4 h-4 */
   height: 16px;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--text-muted);
   pointer-events: none;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.05); /* bg-foreground/5 */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
   border-radius: 8px;
   font-family: var(--font-sans);
   font-size: 0.875rem;
@@ -223,15 +225,15 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #22d3ee; /* focus:border-cyan-400 */
+  border-color: var(--accent-cyan);
 }
 
-/* Submit Button: w-full h-16 bg-foreground text-background hover:bg-cyan-400 transition-all font-black uppercase tracking-[0.2em] */
+/* Submit Button */
 #submit-btn {
   width: 100%;
   height: 64px; /* h-16 (64px) */
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.2em; /* tracking-[0.2em] */
@@ -246,16 +248,17 @@
 }
 
 #submit-btn:hover {
-  background-color: #22d3ee; /* hover:bg-cyan-400 */
+  background-color: var(--accent-cyan);
   color: #000000;
   gap: 1rem;
 }
 
-/* Footer Section (Exact Match to App.tsx:L117-175) */
+/* Footer Section */
 .footer {
   padding: 6rem 1.5rem; /* py-24 px-6 */
-  border-top: 1px solid rgba(255, 255, 255, 0.05); /* border-t border-foreground/5 */
-  background-color: #000000; /* bg-background */
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 @media (min-width: 768px) {
@@ -291,7 +294,7 @@
   letter-spacing: -0.05em; /* tracking-tighter */
   margin-bottom: 2rem; /* mb-8 */
   line-height: 1.1;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 @media (min-width: 768px) {
@@ -307,19 +310,19 @@
 
 .social-btn {
   padding: 1rem; /* p-4 */
-  background: rgba(255, 255, 255, 0.05); /* bg-foreground/5 */
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 9999px; /* rounded-full */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--text-primary);
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .social-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1); /* group-hover:scale-110 */
+  background: var(--bg-secondary);
+  transform: scale(1.1);
 }
 
 .social-btn svg {
@@ -344,24 +347,24 @@
   font-size: 0.75rem; /* text-xs */
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.3); /* text-foreground/30 */
+  color: var(--text-muted);
   margin-bottom: 0.5rem;
 }
 
 .link-col a {
   font-size: 1.125rem; /* text-lg (18px) */
-  color: #ffffff;
+  color: var(--text-primary);
   transition: color 0.2s ease;
 }
 
 .link-col a:hover {
-  color: #22d3ee;
+  color: var(--accent-cyan);
 }
 
 .footer-bottom {
   margin-top: 6rem; /* mt-24 (96px) */
   padding-top: 3rem; /* pt-12 (48px) */
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -369,7 +372,7 @@
   align-items: center;
   font-family: var(--font-mono);
   font-size: 0.75rem; /* text-xs */
-  color: rgba(255, 255, 255, 0.2); /* text-foreground/20 */
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   max-width: 1280px;
@@ -381,18 +384,4 @@
   .footer-bottom {
     flex-direction: row;
   }
-}
-
-.status-indicator {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.pulse-dot {
-  width: 8px; /* w-2 */
-  height: 8px; /* h-2 */
-  border-radius: 9999px;
-  background-color: #22c55e; /* bg-green-500 */
-  animation: pulse 2s infinite;
 }
