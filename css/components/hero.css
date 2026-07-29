@@ -214,11 +214,6 @@
   padding: 0.75rem 1.75rem;
   background-color: var(--text-primary);
   color: var(--bg-primary);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.875rem;
-  border-radius: 0;
   box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -231,12 +226,7 @@
   padding: 0.75rem 1.75rem;
   border: 2px solid var(--border-color);
   color: var(--text-primary);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.875rem;
   backdrop-filter: blur(4px);
-  border-radius: 0;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
