@@ -1,4 +1,3 @@
-/* Top Scroll Depth Progress Bar */
 export function initScrollProgress() {
   const progressBar = document.getElementById('scroll-progress');
   if (!progressBar) return;

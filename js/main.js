@@ -1,4 +1,3 @@
-/* Main Application Orchestrator */
 import { initTheme } from './utils/theme.js';
 import { initCursor } from './components/cursor.js';
 import { initScrollProgress } from './components/scroll-progress.js';
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initRunnerGame();
   initContactMe();
 
-  // Global GSAP Bottom-Up Scroll Fade-In Animations
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 

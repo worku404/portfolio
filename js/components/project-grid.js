@@ -1,4 +1,3 @@
-/* Projects Grid Renderer with Direct Inline Data & GSAP 3D Tilt */
 const PROJECTS = [
   {
     "id": "1",
@@ -12,7 +11,7 @@ const PROJECTS = [
   {
     "id": "2",
     "title": "My Shop — Django E-Commerce Platform",
-    "description": "Production-ready e-commerce platform featuring  localized storefronts, cart and coupon logic, weighted shipping, Stripe checkout, webhook-based payment verification, invoice generation, and asynchronous processing with Celery",
+    "description": "Production-ready e-commerce platform featuring localized storefronts, cart and coupon logic, weighted shipping, Stripe checkout, webhook-based payment verification, invoice generation, and asynchronous processing with Celery",
     "imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1200&q=80",
     "color": "#22d3ee",
     "githubUrl": "https://github.com/worku404/Online-Shop"
@@ -78,11 +77,11 @@ export function initProjectsGrid() {
     )
     .join('');
 
-  // Attach 3D Mouse Perspective Tilt Effect
   document.querySelectorAll('.project-card').forEach((card) => {
     const inner = card.querySelector('.project-card-inner');
 
     card.addEventListener('mousemove', (e) => {
+      // Relative mouse offset normalization [-0.5..+0.5] for card tilt math
       const rect = card.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
@@ -113,7 +112,6 @@ export function initProjectsGrid() {
     });
   });
 
-  // GSAP ScrollTrigger Scroll Fade In Animation
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
     const projectItems = gsap.utils.toArray('.project-item');

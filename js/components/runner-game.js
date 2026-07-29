@@ -1,4 +1,3 @@
-/* Pure 2D Arcade Runner Engine (Exact Match to RunnerGame.tsx) */
 export function initRunnerGame() {
   const canvas = document.getElementById('game-canvas');
   const container = document.getElementById('game-container');
@@ -27,7 +26,6 @@ export function initRunnerGame() {
   let bestScore = parseInt(localStorage.getItem(BEST_SCORE_KEY) || '0');
   let gameStarted = false;
   let isGameOver = false;
-  let animId = null;
   let gameSpeed = 5;
 
   let jumpBufferedUntil = 0;
@@ -80,6 +78,7 @@ export function initRunnerGame() {
     const now = performance.now();
     jumpBufferedUntil = now + JUMP_BUFFER_MS;
 
+    // Coyote Time grace window check (80ms)
     if (!player.isJumping || now - lastGroundedAt <= COYOTE_TIME_MS) {
       performJump();
     }
@@ -126,7 +125,7 @@ export function initRunnerGame() {
       const obs = obstacles[i];
       obs.x -= obs.speed;
 
-      // AABB Bounding Box Collision
+      // AABB Bounding Box Collision Intersection
       if (
         player.x < obs.x + obs.width &&
         player.x + player.width > obs.x &&
@@ -159,7 +158,6 @@ export function initRunnerGame() {
   function draw() {
     ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 
-    // Ground Line
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
     ctx.lineWidth = 2;
     ctx.beginPath();
@@ -167,13 +165,11 @@ export function initRunnerGame() {
     ctx.lineTo(GAME_WIDTH, GROUND_Y);
     ctx.stroke();
 
-    // Player Box (#00f2ff with neon glow)
     ctx.fillStyle = '#00f2ff';
     ctx.shadowBlur = 15;
     ctx.shadowColor = '#00f2ff';
     ctx.fillRect(player.x, player.y, player.width, player.height);
 
-    // Obstacles (#ff4d4d with neon glow)
     ctx.fillStyle = '#ff4d4d';
     ctx.shadowColor = '#ff4d4d';
     obstacles.forEach((obs) => {
@@ -186,10 +182,9 @@ export function initRunnerGame() {
   function loop() {
     update();
     draw();
-    animId = requestAnimationFrame(loop);
+    requestAnimationFrame(loop);
   }
 
-  // Pointer Down listener on Canvas (focuses frame and triggers jump/restart)
   canvas.addEventListener('pointerdown', (e) => {
     e.preventDefault();
     focusGameFrame();
@@ -199,7 +194,6 @@ export function initRunnerGame() {
   startBtn.addEventListener('click', resetGame);
   replayBtn.addEventListener('click', resetGame);
 
-  // Global Keyboard Listener (Space / W / ArrowUp)
   window.addEventListener('keydown', (e) => {
     if (['Space', 'KeyW', 'ArrowUp'].includes(e.code)) {
       const activeElement = document.activeElement;

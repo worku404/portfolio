@@ -1,4 +1,3 @@
-/* Web3Forms Contact Form AJAX Controller */
 import { showToast } from '../utils/toast.js';
 
 export function initContactMe() {

@@ -1,4 +1,3 @@
-/* Custom Mouse Cursor Follower & CSS 3D Cube Mouse Parallax */
 export function initCursor() {
   const cursor = document.getElementById('custom-cursor');
   const dot = document.getElementById('custom-cursor-dot');
@@ -19,11 +18,10 @@ export function initCursor() {
     dot.style.left = `${mouseX}px`;
     dot.style.top = `${mouseY}px`;
 
-    // Normalized mouse coordinates from -0.5 to 0.5
+    // Coordinate normalization [-0.5..+0.5] from screen center (0, 0)
     const nx = e.clientX / window.innerWidth - 0.5;
     const ny = e.clientY / window.innerHeight - 0.5;
 
-    // Floating icons micro-shift matching useParallax(1.5) in live app (max 1.5px)
     if (iconGroup) {
       iconGroup.style.transform = `translate3d(${nx * 1.5}px, ${ny * 1.5}px, 0)`;
     }
@@ -33,13 +31,13 @@ export function initCursor() {
   });
 
   function animate() {
+    // Lerp smoothing formula: current += (target - current) * 0.18
     cursorX += (mouseX - cursorX) * 0.18;
     cursorY += (mouseY - cursorY) * 0.18;
 
     cursor.style.left = `${cursorX}px`;
     cursor.style.top = `${cursorY}px`;
 
-    // Move CSS 3D Cube wrapper & background glow aura with mouse parallax without interfering with @keyframes rotateCube
     if (cubeWrapper && glowAura) {
       cubeWrapper.style.transform = `translate3d(${targetX * 0.8}px, ${targetY * 0.8}px, 0)`;
       glowAura.style.transform = `translate3d(${targetX * 1.4}px, ${targetY * 1.4}px, 0)`;

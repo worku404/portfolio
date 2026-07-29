@@ -1,4 +1,3 @@
-/* Theme Management Module */
 export function initTheme() {
   const sunIcon = document.getElementById('sun-icon');
   const moonIcon = document.getElementById('moon-icon');

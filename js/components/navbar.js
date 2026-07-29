@@ -1,4 +1,3 @@
-/* Navbar & Fullscreen Drawer Controller */
 export function initNavbar() {
   const menuBtn = document.getElementById('menu-toggle');
   const drawer = document.getElementById('menu-drawer');
