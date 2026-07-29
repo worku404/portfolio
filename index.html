@@ -6,30 +6,23 @@
   <title>Worku Wondoson Mengste | Portfolio</title>
   <meta name="description" content="Django Developer & Full-Stack Engineer" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- GSAP & ScrollTrigger for Scroll Animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  <!-- CSS Entry Point -->
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body id="top">
-  <!-- Scroll Progress Bar -->
   <div id="scroll-progress" class="scroll-progress-bar"></div>
 
-  <!-- Custom Cursor -->
   <div id="custom-cursor" class="custom-cursor"></div>
   <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
 
-  <!-- Navigation Header -->
   <header id="navbar" class="navbar-header">
     <div class="navbar-brand">
       <div class="brand-logo">WM</div>
@@ -70,7 +63,6 @@
       </button>
     </div>
 
-    <!-- Fullscreen Menu Drawer -->
     <div id="menu-drawer" class="menu-drawer">
       <nav class="drawer-nav">
         <a href="#top" class="drawer-link">Home</a>
@@ -83,9 +75,7 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section id="hero" class="hero-section">
-      <!-- Pure CSS 3D Rotating Cube & Emerald Glow Aura -->
       <div class="css-cube-wrapper">
         <div id="css-cube" class="css-cube">
           <div class="cube-face front"><img src="assets/images/django-hero.svg" alt="Django" /></div>
@@ -139,7 +129,6 @@
       </a>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about-section">
       <div class="container about-grid">
         <div class="about-left">
@@ -191,7 +180,6 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects-section">
       <div class="container">
         <div class="section-header">
@@ -207,13 +195,10 @@
           </div>
         </div>
 
-        <div id="projects-grid" class="projects-grid">
-          <!-- Dynamically populated from js/components/project-grid.js -->
-        </div>
+        <div id="projects-grid" class="projects-grid"></div>
       </div>
     </section>
 
-    <!-- Interactive Game Section -->
     <section id="experiment" class="game-section">
       <div class="game-header">
         <h2 class="game-title">
@@ -250,7 +235,6 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact-section">
       <div class="contact-grid">
         <div class="contact-info">
@@ -292,7 +276,6 @@
 
         <div class="contact-form-card">
           <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-            <!-- Web3Forms Access Key -->
             <input type="hidden" name="access_key" value="da636f9a-fc22-4e5a-a3b8-a268e184c0cf" />
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
@@ -333,7 +316,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-brand">
@@ -374,10 +356,8 @@
     </div>
   </footer>
 
-  <!-- Toast Container -->
   <div id="toast-container" class="toast-container"></div>
 
-  <!-- Entry Script -->
   <script type="module" src="js/main.js"></script>
 </body>
 </html>

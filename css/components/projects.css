@@ -1,4 +1,3 @@
-/* Projects Section & 3D Tilt Cards */
 .projects-section {
   padding: 6rem 0;
   background-color: var(--bg-primary);
@@ -8,14 +7,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 4rem; /* mb-16 (64px) */
-  gap: 1.5rem; /* gap-6 */
+  margin-bottom: 4rem;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .section-header {
     flex-direction: row;
-    align-items: flex-end; /* md:items-end */
+    align-items: flex-end;
   }
 }
 
@@ -27,7 +26,7 @@
 
 @media (min-width: 768px) {
   .header-arrow {
-    display: block; /* hidden md:block */
+    display: block;
   }
 }
 
@@ -47,7 +46,7 @@
 @media (min-width: 768px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem; /* Exact gap-12 lg:gap-20 (80px) */
+    gap: 5rem;
   }
 }
 
@@ -80,7 +79,6 @@
   border-color: var(--text-primary);
 }
 
-/* Exact group-hover:scale-110 duration-700 */
 .project-bg-img {
   position: absolute;
   top: 0;

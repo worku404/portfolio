@@ -1,4 +1,3 @@
-/* Navbar & Navigation Drawer Styles */
 .scroll-progress-bar {
   position: fixed;
   top: 0;
@@ -15,7 +14,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem; /* p-6 (24px) */
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +24,7 @@
 
 @media (min-width: 768px) {
   .navbar-header {
-    padding: 3rem; /* md:p-12 (48px) */
+    padding: 3rem;
   }
 }
 
@@ -55,7 +54,6 @@
   transform: rotate(-6deg);
 }
 
-/* Hide name/role on small screens (< 768px), display block on md: */
 .brand-info {
   display: none;
 }
@@ -110,17 +108,14 @@
   height: 24px;
 }
 
-/* Sun icon color text-yellow-400 */
 #sun-icon {
   color: #facc15;
 }
 
-/* Moon icon color text-indigo-400 */
 #moon-icon {
   color: #818cf8;
 }
 
-/* Drawer Menu */
 .menu-drawer {
   position: fixed;
   inset: 0;
@@ -138,7 +133,7 @@
 }
 
 .menu-drawer.open {
-  z-index: 40; /* Stacking context above main content but below navbar header */
+  z-index: 40;
   opacity: 1;
   visibility: visible;
   transform: translateX(0);

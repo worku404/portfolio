@@ -1,6 +1,5 @@
-/* 2D Arcade Runner Game Section (Exact Match to RunnerGame.tsx with Mobile Responsiveness) */
 .game-section {
-  padding: 6rem 0; /* py-24 */
+  padding: 6rem 0;
   background-color: var(--bg-primary);
   display: flex;
   flex-direction: column;
@@ -9,46 +8,45 @@
 
 .game-header {
   text-align: center;
-  margin-bottom: 3rem; /* mb-12 (48px) */
-  padding: 0 1.5rem; /* px-6 */
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
 }
 
 .game-title {
-  font-size: 2.25rem; /* text-4xl (36px) */
-  font-weight: 900; /* font-black */
+  font-size: 2.25rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: -0.05em; /* tracking-tighter */
-  margin-bottom: 1rem; /* mb-4 (16px) */
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem; /* gap-4 */
+  gap: 1rem;
   color: var(--text-primary);
 }
 
 @media (min-width: 768px) {
   .game-title {
-    font-size: 3.75rem; /* md:text-6xl (60px) */
+    font-size: 3.75rem;
   }
 }
 
 .game-subtitle {
   color: var(--text-secondary);
-  max-width: 36rem; /* max-w-xl (576px) */
+  max-width: 36rem;
   margin: 0 auto;
-  line-height: 1.625; /* leading-relaxed */
+  line-height: 1.625;
   font-family: var(--font-serif);
 }
 
-/* Container Frame: aspect-[16/9] min-h-[220px] on mobile for phone button visibility, aspect-[13/4] on md: */
 .game-container {
   position: relative;
   width: 100%;
-  max-width: 1040px; /* max-w-[1040px] */
-  aspect-ratio: 16 / 9; /* aspect-[16/9] mobile */
+  max-width: 1040px;
+  aspect-ratio: 16 / 9;
   min-height: 220px;
   background-color: var(--bg-secondary);
-  border-radius: 16px; /* rounded-2xl */
+  border-radius: 16px;
   border: 2px solid var(--border-color);
   overflow: hidden;
   box-shadow: 0 25px 50px -12px var(--shadow-color);
@@ -59,7 +57,7 @@
 
 @media (min-width: 768px) {
   .game-container {
-    aspect-ratio: 13 / 4; /* md:aspect-[13/4] */
+    aspect-ratio: 13 / 4;
     min-height: auto;
   }
 }
@@ -77,47 +75,47 @@
 
 .game-scores {
   position: absolute;
-  top: 1rem; /* top-4 on mobile */
-  left: 1rem; /* left-4 on mobile */
+  top: 1rem;
+  left: 1rem;
   display: flex;
-  gap: 1.5rem; /* gap-6 */
+  gap: 1.5rem;
   font-family: var(--font-mono);
   z-index: 5;
 }
 
 @media (min-width: 768px) {
   .game-scores {
-    top: 1.5rem; /* top-6 */
-    left: 1.5rem; /* left-6 */
-    gap: 2rem; /* gap-8 */
+    top: 1.5rem;
+    left: 1.5rem;
+    gap: 2rem;
   }
 }
 
 .score-label {
-  font-size: 0.625rem; /* text-[10px] */
+  font-size: 0.625rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em; /* tracking-widest */
+  letter-spacing: 0.1em;
   color: var(--text-muted);
   display: block;
 }
 
 .score-value {
-  font-size: 1.25rem; /* text-xl on mobile */
+  font-size: 1.25rem;
   font-weight: 900;
   color: var(--text-primary);
 }
 
 @media (min-width: 768px) {
   .score-value {
-    font-size: 1.5rem; /* text-2xl on desktop */
+    font-size: 1.5rem;
   }
 }
 
 .game-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* bg-background/60 */
-  backdrop-filter: blur(4px); /* backdrop-blur-sm */
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,30 +133,29 @@
 .game-hint {
   margin-top: 0.75rem;
   font-family: var(--font-mono);
-  font-size: 0.65rem; /* text-xs */
+  font-size: 0.65rem;
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* Game Over Title: text-2xl on mobile, text-6xl on md: */
 .game-over-title {
-  font-size: 1.75rem; /* text-2xl (28px) on mobile */
-  font-weight: 900; /* font-black */
+  font-size: 1.75rem;
+  font-weight: 900;
   text-transform: uppercase;
   font-style: italic;
-  letter-spacing: -0.05em; /* tracking-tighter */
-  color: #ffffff; /* text-foreground */
+  letter-spacing: -0.05em;
+  color: #ffffff;
   margin-bottom: 0.5rem;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .game-over-title {
-    font-size: 3.75rem; /* md:text-6xl (60px) */
+    font-size: 3.75rem;
   }
 }
 
 .final-score {
-  font-size: 1.125rem; /* text-lg on mobile */
+  font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
   color: #ffffff;
@@ -166,14 +163,13 @@
 
 @media (min-width: 768px) {
   .final-score {
-    font-size: 1.5rem; /* text-2xl on desktop */
+    font-size: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
-/* Start Game Button */
 #start-game-btn {
-  padding: 0.75rem 2rem; /* px-8 py-3 on mobile */
+  padding: 0.75rem 2rem;
   background-color: #ffffff;
   color: #000000;
   font-weight: 900;
@@ -186,17 +182,16 @@
 
 @media (min-width: 768px) {
   #start-game-btn {
-    padding: 1rem 3rem; /* px-12 py-4 on desktop */
+    padding: 1rem 3rem;
   }
 }
 
 #start-game-btn:hover {
-  transform: scale(1.1); /* hover:scale-110 */
+  transform: scale(1.1);
 }
 
-/* Replay Button */
 #replay-game-btn {
-  padding: 0.5rem 1.75rem; /* px-7 py-2 on mobile */
+  padding: 0.5rem 1.75rem;
   background-color: #ef4444;
   color: #ffffff;
   font-weight: 900;
@@ -209,7 +204,7 @@
 
 @media (min-width: 768px) {
   #replay-game-btn {
-    padding: 0.75rem 2.5rem; /* px-10 py-3 on desktop */
+    padding: 0.75rem 2.5rem;
   }
 }
 
