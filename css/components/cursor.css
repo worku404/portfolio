@@ -1,0 +1,54 @@
+/* Custom Cursor Styles (Exact Clone of CustomCursor.tsx) */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #ffffff;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  mix-blend-mode: difference;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .custom-cursor {
+    display: block;
+  }
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  mix-blend-mode: difference;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .custom-cursor-dot {
+    display: block;
+  }
+}
+
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(2.5);
+  background-color: #ffffff;
+}
+
+.custom-cursor-dot.hover {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}

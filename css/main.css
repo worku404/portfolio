@@ -1,0 +1,13 @@
+/* Main CSS Entry Point */
+@import 'variables.css';
+@import 'reset.css';
+@import 'layout.css';
+
+/* Component Styles */
+@import 'components/navbar.css';
+@import 'components/hero.css';
+@import 'components/projects.css';
+@import 'components/game.css';
+@import 'components/contact.css';
+@import 'components/cursor.css';
+@import 'components/toast.css';

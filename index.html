@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worku Wondoson Mengste | Portfolio</title>
+  <meta name="description" content="Django Developer & Full-Stack Engineer" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- GSAP & ScrollTrigger for Scroll Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- CSS Entry Point -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body id="top">
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
+
+  <!-- Navigation Header -->
+  <header id="navbar" class="navbar-header">
+    <div class="navbar-brand">
+      <div class="brand-logo">WM</div>
+      <div class="brand-info">
+        <p class="brand-name">Worku Wondoson Mengste</p>
+        <p class="brand-role">Junior Web Developer</p>
+      </div>
+    </div>
+
+    <div class="navbar-controls">
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+        <svg id="sun-icon" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg id="moon-icon" class="icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <button id="menu-toggle" class="icon-btn" aria-label="Toggle menu">
+        <svg id="menu-icon" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="close-icon" class="icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Fullscreen Menu Drawer -->
+    <div id="menu-drawer" class="menu-drawer">
+      <nav class="drawer-nav">
+        <a href="#top" class="drawer-link">Home</a>
+        <a href="#projects" class="drawer-link">Projects</a>
+        <a href="#experiment" class="drawer-link">Experiment</a>
+        <a href="#about" class="drawer-link">About</a>
+        <a href="#contact" class="drawer-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <!-- Pure CSS 3D Rotating Cube & Emerald Glow Aura -->
+      <div class="css-cube-wrapper">
+        <div id="css-cube" class="css-cube">
+          <div class="cube-face front"><img src="assets/images/django-hero.svg" alt="Django" /></div>
+          <div class="cube-face back"><img src="assets/images/django-hero.svg" alt="Django" /></div>
+          <div class="cube-face right"><img src="assets/images/django-hero.svg" alt="Django" /></div>
+          <div class="cube-face left"><img src="assets/images/django-hero.svg" alt="Django" /></div>
+          <div class="cube-face top"></div>
+          <div class="cube-face bottom"></div>
+        </div>
+        <div id="cube-glow-aura" class="cube-glow-aura"></div>
+      </div>
+
+      <div id="floating-icons" class="floating-icons">
+        <div class="floating-icon icon-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" width="60" height="60">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+        </div>
+        <div class="floating-icon icon-2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5" width="80" height="80">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="9" y1="21" x2="9" y2="9"></line>
+          </svg>
+        </div>
+        <div class="floating-icon icon-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.5" width="40" height="40">
+            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div id="hero-theme-display" class="hero-theme-display">
+          <h1 id="hero-title" class="hero-title">Django Developer</h1>
+          <p id="hero-subtitle" class="hero-subtitle">
+            I build production-grade backends — authentication systems, REST APIs, real-time features, and relational data models designed to hold up under real usage.
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" id="btn-explore">Explore Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down-arrow" aria-label="Scroll to about section">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about-left">
+          <div class="about-header-group">
+            <div>
+              <p class="section-tag">About Me</p>
+              <h2 class="about-title">
+                Junior Django <br />
+                <span class="gradient-text">Full-Stack Builder</span>
+              </h2>
+            </div>
+
+            <div class="profile-card">
+              <img src="assets/images/profile.jpg" alt="Worku Wondoson Mengste" class="profile-img" />
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <p class="stat-label">Base</p>
+              <p class="stat-value">Addis Ababa, Ethiopia</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">Projects</p>
+              <p class="stat-value">4 Full-Stack Builds</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">Primary Focus</p>
+              <p class="stat-value">Django, PostgreSQL, and API Design</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">Working Style</p>
+              <p class="stat-value">Clean Architecture, Deliberate Tradeoffs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <p class="bio-text">
+            My name is <span class="highlight-name">Worku Wondoson Mengste</span>. I'm a Software Engineering student focused on full-stack web development with Django, Python, JavaScript, React, and SQL databases. I build independent projects — real-time chat over WebSockets, streaming AI responses, background task processing, and search infrastructure — because I want to understand systems well enough to make deliberate tradeoffs.
+          </p>
+          <p class="bio-text">
+            My strongest work includes an e-learning platform with live chat and an AI study assistant, an e-commerce system with Stripe payments and Celery-driven order processing, and a blog platform with PostgreSQL trigram search and an AI chat assistant. Across all of them, I care about clean data modeling, maintainable Django app structure, and backend decisions I can actually explain and defend.
+          </p>
+          <p class="bio-text">
+            I'm currently studying at Addis Ababa Science and Technology University in Ethiopia, combining coursework with sustained project work outside the classroom. I'm drawn to the parts of backend engineering most people skip — query optimization, background job design, real-time architecture — and I'm actively looking for junior developer roles, internships, and collaborative projects where that kind of depth is valued.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Selected <br /><span class="gradient-text">Works</span></h2>
+            <p class="section-meta">/ 2024 - 2026 / FULL-STACK DEVELOPMENT / IMMERSIVE UI / PERFORMANCE</p>
+          </div>
+          <div class="header-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="48" height="48">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <div id="projects-grid" class="projects-grid">
+          <!-- Dynamically populated from data/projects.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Game Section -->
+    <section id="experiment" class="game-section">
+      <div class="game-header">
+        <h2 class="game-title">
+          Mini
+          <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" width="36" height="36">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          Challenge
+        </h2>
+        <p class="game-subtitle">
+          Take a short break and try the runner game. Click the game or press Tab to focus it, then use
+          <strong style="color:#ffffff; font-weight:700">Space, W, or Up Arrow</strong> to jump.
+        </p>
+      </div>
+
+      <div id="game-container" class="game-container" tabIndex="0">
+        <canvas id="game-canvas" width="1040" height="320" class="game-canvas"></canvas>
+        <div class="game-scores">
+          <div><span class="score-label">Score</span> <span id="game-score" class="score-value">0</span></div>
+          <div><span class="score-label">Best</span> <span id="game-best" class="score-value">0</span></div>
+        </div>
+        <div id="game-overlay-start" class="game-overlay">
+          <button id="start-game-btn" class="btn btn-primary">Start Game</button>
+          <p class="game-hint">PRESS SPACE / W / UP</p>
+        </div>
+        <div id="game-overlay-over" class="game-overlay game-overlay-over hidden">
+          <h3 class="game-over-title">G-G-Game Over</h3>
+          <div class="final-score flex items-center gap-4 mb-8">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2" width="24" height="24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+            <span>Final Score: <span id="final-score-val">0</span></span>
+          </div>
+          <button id="replay-game-btn" class="btn btn-secondary">Replay?</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="section-title">Get In <br /><span class="gradient-text">Touch</span></h2>
+          <p class="contact-sub">Have a project in mind, or want to talk through a technical problem? I'm always open to discussing new projects, backend architecture, or opportunities to collaborate.</p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon-box icon-mail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <span class="info-label">Email Me</span>
+                <a href="mailto:accworku@gmail.com" class="info-val">accworku@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon-box icon-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-val">Addis Ababa, Ethiopia</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon-box icon-github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
+              <div>
+                <span class="info-label">GitHub</span>
+                <a href="https://github.com/worku404" target="_blank" rel="noopener noreferrer" class="info-val">@worku404</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="da636f9a-fc22-4e5a-a3b8-a268e184c0cf" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Name</label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <input type="text" id="form-name" name="name" placeholder="John Doe" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email</label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <input type="email" id="form-email" name="email" placeholder="john@example.com" required />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <input type="text" id="form-subject" name="subject" placeholder="Project Inquiry" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" id="submit-btn">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Let's create something <br /><span style="color:#22d3ee">extraordinary</span> together.</h3>
+        <div class="footer-socials">
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="X Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/worku404/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://github.com/worku404" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-col">
+          <span class="col-title">Sitemap</span>
+          <a href="#top">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#experiment">Experiment</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="link-col">
+          <span class="col-title">Profiles</span>
+          <a href="assets/images/Worku_Wondoson_Mengste_CV.pdf" target="_blank">Resume</a>
+          <a href="https://github.com/worku404" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/worku404/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Worku Wondoson Mengste. Built with HTML5, CSS3, JavaScript, and Three.js.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Entry Script -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
